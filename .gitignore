@@ -134,3 +134,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Ignore Hardhat build artifacts
+/server/artifacts/
+/server/cache/
+/server/typechain/  # If you use TypeChain
+/server/deployments/  # If you use hardhat-deploy
+/server/.env
+/server/.env.hardhat
+/server/*.dbg.json
