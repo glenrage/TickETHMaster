@@ -1,21 +1,23 @@
 {
-  "name": "hardhat-project",
+  "name": "contracts",
   "version": "1.0.0",
   "description": "Smart contracts for TicketNFT DApp on Base network",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon scripts/deploy_ticketing.js",
     "compile": "npx hardhat compile",
-    "deploy": "npx hardhat run scripts/deploy_ticketing.js --network baseSepolia",
+    "deploy:baseGoerli": "npx hardhat run scripts/deploy_ticketing.js --network baseGoerli",
+    "deploy:localhost": "npx hardhat run scripts/deploy_ticketing.js --network localhost",
+    "hardhat:node": "npx hardhat node",
     "test": "npx hardhat test"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "dotenv": "^16.5.0",
-    "hardhat": "^2.24.2"
+    "hardhat": "^2.24.2",
+    "nodemon": "^3.0.3"
+
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.3.0",
-    "nodemon": "^3.0.3"
   }
 }
